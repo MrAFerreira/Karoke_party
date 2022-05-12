@@ -23,6 +23,11 @@ router.get('/list', isLoggedIn, (req, res, next) => {
     .then((requests) => res.render('list', { requests }))
     .catch((err) => next(err));
 });
+router.get('/secret-list', isLoggedIn, (req, res, next) => {
+  Request.find()
+    .then((requests) => res.render('secret-list', { requests }))
+    .catch((err) => next(err));
+});
 
 router.get('/delete/:id', (req, res, next) => {
   const { id } = req.params;
