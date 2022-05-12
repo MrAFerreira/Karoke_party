@@ -3,11 +3,11 @@ const { Schema, model } = require('mongoose');
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
-    name: {
+    username: {
       type: String,
       unique: true,
     },
-    passwordHash: String,
+    password: String,
   },
   {
     timestamps: true,
