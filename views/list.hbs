@@ -1,0 +1,14 @@
+<h1 class='display-1 mb-5'>Karaoke list</h1>
+
+<h3 class='mb-5'>Next up:</h3>
+
+{{#each requests}}
+  <div class='card mb-3'>
+
+    <div class='row card-body'>
+      <p>Singer(s): <b>{{singers}}</b></p>
+      <p>Song: <b>{{song}}</b></p>
+      <a href='/delete/{{_id}}'>X</a>
+    </div>
+  </div>
+{{/each}}
